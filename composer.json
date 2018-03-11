@@ -1,0 +1,39 @@
+{
+    "name": "qlimix/http-middleware",
+    "type": "package",
+    "license": "LGPL-3.0-only",
+    "authors": [
+        {
+            "name": "frank",
+            "email": "frank@qlimix.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Qlimix\\HttpMiddleware\\": "src/"
+        }
+    },
+    "require": {
+        "psr/http-server-middleware": "^1.0"
+    },
+    "require-dev": {
+        "qlimix/uuid": "dev-master",
+        "qlimix/request-id-container": "dev-master"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "suggest": {
+        "qlimix/uuid": "UUID generator interface, for request-id middleware"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@bitbucket.org:qlimix/uuid.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@bitbucket.org:qlimix/request-id-container.git"
+        }
+    ]
+}
