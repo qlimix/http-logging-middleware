@@ -18,13 +18,15 @@
     },
     "require-dev": {
         "qlimix/uuid": "dev-master",
-        "qlimix/request-id-container": "dev-master"
+        "qlimix/request-id-container": "dev-master",
+        "qlimix/logging": "dev-master"
     },
     "config": {
         "sort-packages": true
     },
     "suggest": {
-        "qlimix/uuid": "UUID generator interface, for request-id middleware"
+        "qlimix/uuid": "UUID generator interface, for request-id middleware",
+        "qlimix/logging": "Response/request logging"
     },
     "repositories": [
         {
@@ -34,6 +36,10 @@
         {
             "type": "vcs",
             "url":  "git@bitbucket.org:qlimix/request-id-container.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@bitbucket.org:qlimix/logging.git"
         }
     ]
 }
