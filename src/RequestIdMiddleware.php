@@ -21,10 +21,12 @@ final class RequestIdMiddleware implements MiddlewareInterface
 
     /**
      * @param UUID4Generator $uuidGenerator
+     * @param RequestIdContainer $requestIdContainer
      */
-    public function __construct(UUID4Generator $uuidGenerator)
+    public function __construct(UUID4Generator $uuidGenerator, RequestIdContainer $requestIdContainer)
     {
         $this->uuidGenerator = $uuidGenerator;
+        $this->requestIdContainer = $requestIdContainer;
     }
 
     /**
