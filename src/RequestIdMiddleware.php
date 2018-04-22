@@ -43,6 +43,6 @@ final class RequestIdMiddleware implements MiddlewareInterface
                 self::REQUEST_ID,
                 $uuid4
             )
-        );
+        )->withHeader(self::REQUEST_ID, $uuid4);
     }
 }
