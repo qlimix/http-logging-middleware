@@ -1,5 +1,5 @@
 {
-    "name": "qlimix/http-middleware",
+    "name": "qlimix/http-logging-middleware",
     "type": "package",
     "license": "LGPL-3.0-only",
     "authors": [
@@ -14,19 +14,11 @@
         }
     },
     "require": {
-        "psr/http-server-middleware": "^1.0"
-    },
-    "require-dev": {
-        "qlimix/uuid": "dev-master",
-        "qlimix/request-id-container": "dev-master",
-        "qlimix/logging": "dev-master"
+        "psr/http-server-middleware": "^1.0",
+        "qlimix/logging-http-logger": "dev-master"
     },
     "config": {
         "sort-packages": true
-    },
-    "suggest": {
-        "qlimix/uuid": "UUID generator interface, for request-id middleware",
-        "qlimix/logging": "Response/request logging"
     },
     "repositories": [
         {
@@ -35,11 +27,8 @@
         },
         {
             "type": "vcs",
-            "url":  "git@bitbucket.org:qlimix/request-id-container.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "git@bitbucket.org:qlimix/logging.git"
+            "url":  "git@bitbucket.org:qlimix/logging-http-logger.git"
         }
-    ]
+    ],
+    "minimum-stability": "dev"
 }
