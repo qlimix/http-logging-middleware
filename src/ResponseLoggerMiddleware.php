@@ -8,14 +8,11 @@ use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use Qlimix\Log\Logger\Response\ResponseLoggerInterface;
 
-final class ResponseLogger implements MiddlewareInterface
+final class ResponseLoggerMiddleware implements MiddlewareInterface
 {
     /** @var ResponseLoggerInterface */
     private $responseLogger;
 
-    /**
-     * @param ResponseLoggerInterface $responseLogger
-     */
     public function __construct(ResponseLoggerInterface $responseLogger)
     {
         $this->responseLogger = $responseLogger;

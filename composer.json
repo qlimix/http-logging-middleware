@@ -1,34 +1,39 @@
 {
     "name": "qlimix/http-logging-middleware",
-    "type": "package",
-    "license": "LGPL-3.0-only",
+    "type": "library",
+    "description": "Logging request and response with PSR-15 middleware",
+    "license": "MIT",
+    "keywords": [
+        "request",
+        "response",
+        "logging",
+        "PSR-15"
+    ],
     "authors": [
         {
             "name": "frank",
             "email": "frank@qlimix.net"
         }
     ],
+    "require": {
+        "php": ">=7.2",
+        "psr/http-server-middleware": "^1.0",
+        "qlimix/logging-http-logger": "^1.0"
+    },
     "autoload": {
         "psr-4": {
             "Qlimix\\HttpMiddleware\\": "src/"
         }
     },
-    "require": {
-        "psr/http-server-middleware": "^1.0",
-        "qlimix/logging-http-logger": "dev-master"
+    "autoload-dev": {
+        "psr-4": {
+            "Qlimix\\Tests\\HttpMiddleware\\": "tests/"
+        }
     },
     "config": {
         "sort-packages": true
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "git@bitbucket.org:qlimix/uuid.git"
-        },
-        {
-            "type": "vcs",
-            "url":  "git@bitbucket.org:qlimix/logging-http-logger.git"
-        }
-    ],
-    "minimum-stability": "dev"
+    "require-dev": {
+        "qlimix/code-standard": "^1.0"
+    }
 }

@@ -13,9 +13,6 @@ final class RequestLoggerMiddleware implements MiddlewareInterface
     /** @var RequestLoggerInterface */
     private $requestLogger;
 
-    /**
-     * @param RequestLoggerInterface $requestLogger
-     */
     public function __construct(RequestLoggerInterface $requestLogger)
     {
         $this->requestLogger = $requestLogger;
